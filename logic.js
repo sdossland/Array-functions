@@ -11,9 +11,11 @@ const inventors = [
   {firstName: 'Max', lastName: 'Planck', year: 1858, passed: 1947}
 ];
 
-// const people = [
-//   'Beck, Glenn', 'Becker, Carl', 'Beckett, Samuel', 'Beddoes, Mick', 'Beecher, Henry', 'Beethoven, Ludwig', 'Begin, Menachem', 'Belloc, Hilaire', 'Bellow, Saul'
-// ];
+const people = [
+  'Beck, Glenn', 'Becker, Carl', 'Beckett, Samuel', 'Beddoes, Mick', 'Beecher, Henry', 'Beethoven, Ludwig', 'Begin, Menachem', 'Belloc, Hilaire', 'Bellow, Saul'
+];
+
+const data = ['car', 'truck', 'truck', 'car', 'bike', 'walk', 'van', 'bike'];
 
 //filter the inventors by those born in the 1500s
 var fifteenHundredsBirth = inventors.filter(function(inventor) {
@@ -47,3 +49,20 @@ const yearsLived = inventors.sort(function(a, b) {
 });
 // console.log(yearsLived); //worked!
 
+//Create a list of boulevards in Paris that contain 'de' anywhere in the name.
+//Use https://en.wikipedia.org/wiki/Category:Boulevards_in_Paris
+
+
+//Sort people alphabetically by last name
+const alphabeticalOrder = people.sort();
+// console.log(alphabeticalOrder); //worked!
+
+//sum up the instances of each in data
+const sum = data.reduce(function(counter, item) {
+  if (!counter[item]) { //if counter does not exits, create it
+    counter[item] = 0;
+  }
+  counter[item]++; //loop again increasing counter by one each time encountered
+  return counter;
+}, []); //return as an array or object
+// console.log(sum); //worked!
